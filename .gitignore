@@ -1,4 +1,3 @@
-oldcode
-.devcontainer
+oldcode/
 data.csv
-table.html
+.devcontainer/

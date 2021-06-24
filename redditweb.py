@@ -4,7 +4,7 @@ from tqdm import tqdm
 import datetime
 
 api = PushshiftAPI()
-start_time = int(datetime.datetime(2021, 6, 18).timestamp())
+start_time = int(datetime.datetime(2021, 6, 20).timestamp())
 submissions = api.search_submissions(after=start_time,
                                             subreddit='wallstreetbets')
 #%%
@@ -29,7 +29,7 @@ print(output)
 
 # %%
 newoutput = pd.DataFrame(output)
-newoutput.to_html('table.html')
+newoutput.to_html('templates/table.html')
 import time
 time.sleep(10)
 #%%
