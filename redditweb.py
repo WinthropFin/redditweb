@@ -2,11 +2,13 @@
 from psaw import PushshiftAPI
 from tqdm import tqdm
 import datetime
-
+import time
+n_days = 3
 api = PushshiftAPI()
-start_time = int(datetime.datetime(2021, 6, 20).timestamp())
+start_time = int(time.time()) - n_days*60*60*24
 submissions = api.search_submissions(after=start_time,
                                             subreddit='wallstreetbets')
+
 #%%
 import pandas as pd
 import reticker
